@@ -271,7 +271,7 @@ body {
 
 
 .landing {
-   
+
     box-shadow:
         inset 0px 8px 0px var(--main-color),
         inset 0px 12px 10px rgba(0, 0, 0, 0.423),
@@ -281,21 +281,24 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-   overflow: hidden;
+    overflow: hidden;
 
 }
-.landing .img{
+
+.landing .img {
     position: absolute;
     height: 100%;
     z-index: -1;
     background-size: cover;
     animation: alternate-reverse ease-in-out 40s scal infinite;
 }
-@keyframes scal{
-    to{
+
+@keyframes scal {
+    to {
         transform: scale(1.5) rotate(3deg);
     }
 }
+
 h1 {
 
     display: block;
@@ -312,6 +315,7 @@ h1 {
     border-top-left-radius: 20px;
     margin: 0;
 }
+
 .my-name {
     color: var(--main-color);
     font-size: 4rem;
@@ -442,6 +446,7 @@ h1 {
     color: var(--hover-color);
 
 }
+
 .anim-scondry-color:hover {
     color: var(--celection-color);
 
