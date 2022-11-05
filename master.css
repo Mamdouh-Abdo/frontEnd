@@ -320,7 +320,7 @@ h1 {
     background: rgba(254, 254, 254, 0.33);
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
-    padding: 0 10vw 3vw;
+    padding: 0 3vw 3vw;
 }
 
 .my-name {
@@ -594,7 +594,7 @@ h1 {
     }
 
     .my-name {
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .landing h1 {
@@ -602,13 +602,17 @@ h1 {
     }
 
     .landing h1+p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
 
 @media (min-width:992px) {
     .container {
         width: 970px;
+    }
+
+    .landing h1+p {
+        margin-bottom: 4vw;
     }
 }
 
@@ -618,7 +622,7 @@ h1 {
     }
 
     .my-name {
-        font-size: 8rem;
+        font-size: 7rem;
     }
 
     .landing h1+p {
