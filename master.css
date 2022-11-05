@@ -6,12 +6,15 @@
 :root {
 
     --anim-cubic: cubic-bezier(0.47, -1.08, 0.57, 2.5);
+    --anim-cubic2: cubic-bezier(0.58, -0.23, 0.42, 1.29);
     --main-color: #10cab7;
     --hover-color: rgb(47, 255, 255);
     --celection-color: #ffae00;
     --bg-menues-col: #31313186;
     --compon-col: #d4d4d4;
     --txt-shadow: .009em .008em .02em rgb(1, 43, 43), -.01em -.01em .01em #ffffff;
+
+
 }
 
 /*start my framework */
@@ -65,6 +68,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    transition: all .4s var(--anim-cubic2);
 }
 
 body {
@@ -196,6 +200,7 @@ body {
 }
 
 .header .links ul {
+
     position: absolute;
     right: 0px;
     margin: 0px;
@@ -207,6 +212,7 @@ body {
     transition: all 1s var(--anim-cubic);
     z-index: 1;
     display: none;
+
 
 }
 
@@ -246,6 +252,7 @@ body {
     border-color: transparent transparent var(--bg-menues-col) transparent;
     right: 0px;
     top: -60px;
+
 }
 
 .header .links ul li {
@@ -450,6 +457,10 @@ h1 {
 .anim-scondry-color:hover {
     color: var(--celection-color);
 
+}
+
+.icon-tab {
+    color: var(--main-color);
 }
 
 /* component 2  */
