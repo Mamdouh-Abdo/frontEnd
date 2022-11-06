@@ -1,4 +1,8 @@
 {
     "files.autoSaveDelay": 0,
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "editor.suggest.showColors": true,
+    "editor.tokenColorCustomizations": {
+    
+    }
 }
