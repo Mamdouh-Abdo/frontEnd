@@ -7,8 +7,10 @@
 
     --anim-cubic: cubic-bezier(0.47, -1.08, 0.57, 2.5);
     --anim-cubic2: cubic-bezier(0.58, -0.23, 0.42, 1.29);
+    --gradient-lin: linear-gradient(0deg, rgba(16, 202, 183, 1) 0%, rgba(16, 202, 183, 1) 50%, rgba(255, 174, 0, 1) 50%, rgba(255, 174, 0, 1) 100%);
+    --gradient-rad: radial-gradient(circle, rgba(16, 202, 183, 1) 0%, rgba(16, 202, 183, 1) 50%, rgba(255, 174, 0, 1) 50%, rgba(255, 174, 0, 1) 100%);
     --main-color: #10cab7;
-    --hover-color: rgb(47, 255, 255);
+    --hover-color: #2fffff;
     --scondry-col: #ffae00;
     --bg-menues-col: #31313186;
     --compon-col: #d4d4d4;
@@ -50,6 +52,8 @@
 .component-h2 {
     font-size: 10vw;
     display: block;
+    margin: 0;
+    text-align: center;
     font-weight: 800;
     color: var(--compon-col);
 
@@ -271,11 +275,8 @@ body {
 
 }
 
-
 /* End heading  */
 /* start landing page  */
-
-
 .landing {
 
     box-shadow:
@@ -288,13 +289,14 @@ body {
     background-size: cover;
     position: relative;
     overflow: hidden;
-
+    perspective: 400px;
 }
 
+/* backgeround-img animation start*/
 .landing .img {
     position: absolute;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     background-size: cover;
     animation: alternate-reverse ease-in-out 40s scal infinite;
 }
@@ -305,6 +307,129 @@ body {
     }
 }
 
+/* backgeround-img animation end*/
+/* start animation icons  */
+
+.anim-gost {
+    position: absolute;
+    perspective: 300px;
+    z-index: 2;
+}
+
+.icon-node-dot-js {
+    animation: nod 63s alternate-reverse infinite ease-in-out;
+    position: absolute;
+}
+
+@keyframes nod {
+    60% {
+        transform: translate(-650px, 400px) rotate(1turn) scale(3);
+    }
+
+    100% {
+        transform: translate(400px, -600px) rotate(-360deg);
+    }
+
+}
+
+.icon-html5 {
+    animation: htm 80s alternate-reverse infinite ease-in-out;
+    position: absolute;
+}
+
+@keyframes htm {
+    40% {
+        transform: translate(-700px, -400px) rotate(1turn) scale(.8);
+    }
+
+    100% {
+        transform: translate(500px, 600px) rotate(-300deg) scale(3);
+    }
+
+}
+
+.icon-css3 {
+    animation: css 65s alternate-reverse infinite ease-in-out;
+    position: absolute;
+}
+
+@keyframes css {
+    40% {
+        transform: translate(-400px, -900px) rotate(1turn) scale(.8);
+    }
+
+    100% {
+        transform: translate(-800px, 600px) rotate(-360deg) scale(3);
+    }
+
+}
+
+.icon-sass {
+    animation: sas 53s alternate-reverse infinite ease-in-out;
+    position: absolute;
+}
+
+@keyframes sas {
+    60% {
+        transform: translate(-950px, 100px) rotate(1turn) scale(4);
+    }
+
+    100% {
+        transform: translate(-300px, -800px) rotate(-360deg) scale(.6);
+    }
+
+}
+
+.icon-vue-dot-js {
+    animation: veu 76s alternate-reverse infinite ease-in-out;
+    position: absolute;
+}
+
+@keyframes veu {
+    40% {
+        transform: translate(-1100px, -600px) rotate(1turn) scale(1.5);
+    }
+
+
+    70% {
+        transform: translate(800px, 300px) rotate(-360deg) scale(4);
+    }
+
+    100% {
+        transform: translate(300px, -300px) rotate(360deg) scale(2);
+    }
+
+}
+
+
+
+.anim-goost2 {
+
+    position: absolute;
+    perspective: 300px;
+    top: 35%;
+    color: rgba(31, 31, 31, 0.177);
+    left: 78%;
+    background-image: var(--gradient-lin);
+    border-radius: 42px;
+    border-top-right-radius: 42px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 2px solid white;
+    animation: ghost0 alternate-reverse 15s infinite ease-in-out;
+    z-index: 2;
+}
+
+
+
+@keyframes ghost0 {
+
+    100% {
+        transform: translateY(300px) rotate(.5turn);
+    }
+}
+
+/* end animation icons  */
 h1 {
 
     display: block;
@@ -320,6 +445,7 @@ h1 {
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     padding: 0 3vw 3vw;
+    z-index: 2;
 }
 
 .my-name {
@@ -349,6 +475,7 @@ h1 {
     padding: 10px 10px;
     min-width: 200px;
     max-width: 800px;
+    z-index: 2;
 }
 
 .landing.flex-center>.container {
@@ -397,49 +524,62 @@ h1 {
 
 /* end feature page  */
 /* start services */
+.services {
+    margin: 60px 0;
+}
 
 .services p {
-    font-size: 2vw;
-    color: #333;
-    margin-top: -2vw;
+    font-size: 1.5vw;
+
+    color: rgb(99, 99, 99);
+    margin-top: -100px;
     text-align: center;
 }
 
-.services .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+.services .container {}
 
 .stand {
     background-color: var(--main-color);
-    width: 200px;
+    width: 20vw;
     height: 8px;
-    margin-top: -7vw;
-    margin-bottom: 8vw;
+    margin-top: -1vw;
+    margin-bottom: 2vw;
     border-radius: 20px;
+    position: relative;
 }
 
 .stand:nth-child(2) {
-    width: 80%;
+    width: 17vw;
+    background: var(--scondry-col);
 }
 
 .stand:nth-child(3) {
-    width: 60%;
+    width: 14vw;
 }
 
 .stand:nth-child(4) {
-    width: 40%;
+    width: 11vw;
+    background: var(--scondry-col);
 }
 
 .stand:nth-child(5) {
-    width: 20%;
+    width: 8vw;
 }
 
 .stand:nth-child(6) {
-    width: 4%;
+    width: 0;
 }
+
+.stand:nth-child(6):after {
+    content: '';
+    position: absolute;
+    border: solid 3vw;
+    border-color: var(--scondry-col) transparent transparent;
+    left: -3vw;
+
+
+}
+
 
 /* end services */
 /* ************************************************************ */
@@ -592,7 +732,7 @@ h1 {
 @media (min-width:320px) {
     .services p {
         font-size: 4vw;
-        margin-top: -2vw;
+        margin-top: -5vw;
     }
 
     .component-h2 {
@@ -638,6 +778,9 @@ h1 {
         margin-top: 250px;
     }
 
+    .stand {
+        height: 3px;
+    }
 }
 
 /* Normal media query start  */
@@ -691,6 +834,8 @@ h1 {
 @media (min-width:768px) {
     .services p {
         font-size: 2vw;
+        margin-top: -3vw;
+
     }
 
     .component-h2 {
@@ -718,6 +863,10 @@ h1 {
 
     .landing h1+p {
         font-size: 1.5rem;
+    }
+
+    .stand {
+        height: 6px;
     }
 }
 
