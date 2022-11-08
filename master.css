@@ -564,7 +564,7 @@ h1 {
 .services .container {}
 
 .stand {
-    background-color: var(--main-color);
+    background-color: var(--scondry-col);
     width: 20vw;
     height: 8px;
     margin-top: -1vw;
@@ -649,6 +649,7 @@ h1 {
     justify-content: center;
 
 }
+
 .card-col3 .image img {
     position: relative;
     width: 280px;
@@ -898,6 +899,7 @@ h1 {
     .card-col3 .image img {
         width: 240px;
     }
+
     .card-col3 {
         margin-right: 20px;
     }
@@ -1037,10 +1039,13 @@ h1 {
     .serv-card h4+p {
         font-size: 1vw;
     }
-    .card-col3 p{
+
+    .card-col3 p {
         top: 50px;
-        font-size:1.6vw;
+        font-size: 1.4vw;
     }
+
+
 }
 
 @media (min-width:2560px) {
@@ -1063,11 +1068,12 @@ h1 {
     .header .skew-left {
         height: 50px;
     }
-    .card-col3 p{
+
+    .card-col3 p {
         top: 70px;
-        font-size:1.2vw;
+        font-size: .9vw;
     }
-   
+
 }
 
 
