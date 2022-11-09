@@ -854,6 +854,77 @@ hr {
 }
 
 /* End  about  ...........................*/
+/* footer start  */
+footer {
+    display: block;
+    text-align: center;
+    padding: 30px 0;
+    background: var(--main-color);
+    font-size: 22px;
+    color: white;
+}
+
+footer span {
+    animation: anim-color 20s alternate infinite;
+
+}
+
+@keyframes anim-color {
+
+    20% {
+        color: var(--hover-color);
+    }
+
+    50% {
+        color: var(--scondry-col);
+    }
+
+    80% {
+        color: rgb(0, 0, 0)
+    }
+
+    82% {
+        color: rgb(255, 255, 255)
+    }
+
+    82% {
+        color: rgb(255, 255, 255)
+    }
+
+    82% {
+        color: var(--scondry-col)
+    }
+
+    85% {
+        color: var(--scondry-col)
+    }
+
+    87% {
+        color: black
+    }
+
+    89% {
+        color: black
+    }
+
+    91% {
+        color: var(--hover-color)
+    }
+
+    93% {
+        color: var(--hover-color)
+    }
+
+    96% {
+        color: black
+    }
+
+    98% {
+        color: black
+    }
+}
+
+/* footer End */
 /* chat box start  */
 .chat-box {
     position: fixed;
@@ -867,6 +938,7 @@ hr {
     border-top-left-radius: 20px;
     text-shadow: var(--txt-shadow);
     transition: transform .01s ease-out;
+    bottom: 90px;
 }
 
 .chat {
@@ -887,7 +959,7 @@ hr {
 
 .indicator {
     position: fixed;
-    bottom: 30px;
+    bottom: 100px;
     right: 38px;
     width: 30px;
     height: 30px;
@@ -897,7 +969,7 @@ hr {
 
 .indicator2 {
     position: fixed;
-    bottom: 30px;
+    bottom: 100px;
     right: 200px;
     width: 30px;
     height: 30px;
