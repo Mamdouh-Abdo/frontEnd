@@ -609,6 +609,7 @@ h1 {
     margin-top: 60px;
     justify-items: center;
     gap: 60px 10px;
+    position: relative;
 }
 
 .serv-card h4 {
@@ -649,7 +650,7 @@ h1 {
     align-content: center;
     flex-direction: column;
     align-items: center;
-    
+
 
 }
 
@@ -704,10 +705,56 @@ h1 {
     margin-bottom: 60px;
 }
 
+[class^="port-col"] .image {
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+[class^="port-col"] .text {
+    margin-top: 30px;
+    flex-basis: auto;
+    display: flex;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding:30px 10px;
+}
+
+[class^="port-col"] .text+ p {
+    
+}
+
+
+
+
+
+
 
 
 /* end services */
 /* ************************************************************ */
+/* start portfolio*/
+.portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+.port-card {
+    margin: 60px 0;
+    padding: 60px auto;
+    justify-content: center;
+}
+
+/* end portfolio */
 /* chat box start  */
 .chat-box {
     position: fixed;
@@ -850,6 +897,17 @@ h1 {
     gap: 20px 10px;
 }
 
+.h3-comp {
+    display: inline-block;
+    padding: 0;
+    margin: 10px 0;
+    color: #333;
+    border: solid .2vw var(--scondry-col);
+    padding: 10px 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
 /* component 2  */
 
 /* special media mobile que  */
@@ -915,6 +973,12 @@ h1 {
         margin-right: 20px;
     }
 
+    .component-h2+p {
+        font-size: 4vw;
+        margin-top: -5vw;
+        color: #666;
+    }
+
 }
 
 /* Normal media query start  */
@@ -966,10 +1030,10 @@ h1 {
 }
 
 @media (min-width:768px) {
-    .services p {
+    .component-h2+p {
         font-size: 2vw;
         margin-top: -3vw;
-
+        color: #666;
     }
 
     .component-h2 {
@@ -1086,6 +1150,30 @@ h1 {
     }
 
 }
+
+@media (min-width:427px) and (max-width:1199px) {
+    .serv-card {
+        display: flex;
+        flex-flow: wrap;
+        min-width: 300px;
+
+    }
+
+    .card-col3 {
+        display: none;
+
+    }
+
+    .card-col2, .card-col1 {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        flex-flow: column wrap;
+    }
+}
+
 
 
 
