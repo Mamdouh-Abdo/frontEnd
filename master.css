@@ -724,19 +724,14 @@ h1 {
     background-color: white;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
-    padding:30px 10px;
+    padding: 30px 10px;
 }
 
-[class^="port-col"] .text+ p {
-    
+.text p {
+    color: #666;
+
+
 }
-
-
-
-
-
-
-
 
 /* end services */
 /* ************************************************************ */
@@ -755,6 +750,110 @@ h1 {
 }
 
 /* end portfolio */
+/* start about  */
+.about {
+    padding: 0 0 60px;
+}
+
+.about-content {
+    display: flex;
+    flex-flow: wrap row;
+    padding: 60px 0;
+    padding-bottom: 60px;
+    justify-content: space-between;
+}
+
+.about .about-image {
+    width: 250px;
+    height: 375px;
+    position: relative;
+}
+
+.about .about-image img {
+    max-width: 100%;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    background-color: var(--scondry-col);
+    width: 50%;
+    height: 120%;
+    left: -50px;
+    z-index: -1;
+    top: -10%;
+}
+
+.about-image::before {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 50px;
+    border: var(--main-color) solid 80px;
+    border-top-right-radius: 190px;
+    border-bottom-right-radius: 190px;
+    z-index: -1;
+    left: 200px;
+    top: -40px
+}
+
+
+.about-content .text {
+    flex-basis: calc(100% - 450px);
+}
+
+.about-content .text p {
+    line-height: 2;
+
+}
+
+.about-content .text p:first-of-type {
+    font-weight: 700;
+    max-width: 95%;
+}
+
+.about-content .text p:last-of-type {
+    font-weight: 300;
+    max-width: 75%;
+    margin-bottom: 0;
+}
+
+.about-content .text hr {
+    border: var(--main-color) solid 1px;
+    display: inline-block;
+    width: 50%;
+}
+
+hr {
+    border: var(--main-color) solid 1px;
+}
+
+@media (max-width:992px) {
+
+    .about-image::after,
+    .about-image::before {
+        display: none;
+    }
+
+    .about-content {
+        flex-flow: column;
+        align-items: center;
+        align-content: space-between;
+
+    }
+
+    .about .about-image {
+        margin-bottom: 40px;
+        flex: 1;
+        min-width: 95%;
+    }
+
+    .about-content .text {
+        width: 95%;
+    }
+}
+
+/* End  about  ...........................*/
 /* chat box start  */
 .chat-box {
     position: fixed;
@@ -974,6 +1073,7 @@ h1 {
     }
 
     .component-h2+p {
+        text-align: center;
         font-size: 4vw;
         margin-top: -5vw;
         color: #666;
