@@ -286,14 +286,15 @@ body {
     background-size: cover;
     position: relative;
     overflow: hidden;
-    perspective: 400px;
+
+
 }
 
 .down-button {
     background: var(--scondry-col);
     color: #fff;
     position: absolute;
-    top: 5px;
+    top: 26px;
     left: 10px;
     border: solid 2px;
     padding: 0 5px;
@@ -310,7 +311,7 @@ body {
 .landing .img {
     position: absolute;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     background-size: cover;
     animation: alternate-reverse ease-in-out 40s scal infinite;
 }
