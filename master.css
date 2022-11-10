@@ -275,19 +275,24 @@ body {
 /* End heading  */
 /* start landing page  */
 .landing {
-
-    box-shadow:
-        inset 0px 8px 0px var(--main-color),
-        inset 0px 12px 10px rgba(0, 0, 0, 0.423),
-        inset 0px 20px 0px var(--scondry-col),
-        inset 0px 100px 300px rgb(0, 0, 0);
     height: 120vh;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     overflow: hidden;
+}
 
-
+.landing::after {
+    content: '';
+    box-shadow:
+        inset 0px 8px 0px var(--main-color),
+        inset 0px 12px 10px rgba(0, 0, 0, 0.423),
+        inset 0px 20px 0px var(--scondry-col),
+        inset 0px 100px 300px rgb(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
 
 .down-button {
@@ -334,6 +339,7 @@ body {
 .icon-node-dot-js {
     animation: nod 63s alternate-reverse infinite ease-in-out;
     position: absolute;
+    z-index: 1;
 }
 
 @keyframes nod {
@@ -350,6 +356,7 @@ body {
 .icon-html5 {
     animation: htm 80s alternate-reverse infinite ease-in-out;
     position: absolute;
+    z-index: 1;
 }
 
 @keyframes htm {
@@ -366,6 +373,7 @@ body {
 .icon-css3 {
     animation: css 65s alternate-reverse infinite ease-in-out;
     position: absolute;
+    z-index: 1;
 }
 
 @keyframes css {
@@ -382,6 +390,7 @@ body {
 .icon-sass {
     animation: sas 53s alternate-reverse infinite ease-in-out;
     position: absolute;
+    z-index: 1;
 }
 
 @keyframes sas {
@@ -398,6 +407,7 @@ body {
 .icon-vue-dot-js {
     animation: veu 76s alternate-reverse infinite ease-in-out;
     position: absolute;
+    z-index: 1;
 }
 
 @keyframes veu {
@@ -955,6 +965,7 @@ footer span {
     text-shadow: var(--txt-shadow);
     transition: transform .01s ease-out;
     bottom: 90px;
+    z-index: 2;
 }
 
 .chat {
@@ -980,7 +991,7 @@ footer span {
     width: 30px;
     height: 30px;
     transform: rotate(.37turn);
-    z-index: 1;
+    z-index: 3;
 }
 
 .indicator2 {
@@ -990,7 +1001,7 @@ footer span {
     width: 30px;
     height: 30px;
     transform: rotate(.87turn);
-    z-index: 1;
+    z-index: 3;
 }
 
 .arro {
