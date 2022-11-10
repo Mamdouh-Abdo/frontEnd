@@ -210,7 +210,7 @@ body {
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     transition: all 1s var(--anim-cubic);
-    z-index: 1;
+    z-index: 3;
     display: none;
 
 
